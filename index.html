@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Frame | Castelo</title>
+
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-assets>
+        <img src="./imgs/muro_pilares.jpg" id="textura-muro_pilares">
+        <img src="./imgs/telhado.jpg" id="textura-telhado">
+        <img src="./imgs/chao.jpg" id="textura-chao">
+    </a-assets>
+
+    <a-scene>
+
+        <!-- Chão -->
+        <a-plane src="#textura-chao" position="0 1 -2" rotation="-90 0 0" color="gray" height="2.8" width="3"></a-plane>
+        
+        <!-- Telhados dos pilares -->
+        <a-cone src="#textura-telhado" position="-1 2.3 -2" radius-bottom="0.33" height="0.7" color="tomato"></a-cone>
+        <a-cone src="#textura-telhado" position="1 2.3 -2" radius-bottom="0.33" height="0.7" color="tomato"></a-cone>
+
+        <!-- Pilares -->
+        <a-cylinder src="#textura-muro_pilares" position="-1 1.5 -2" radius="0.3" color="orange"></a-cylinder>
+
+        <a-cylinder src="#textura-muro_pilares" position="1 1.5 -2" radius="0.3" color="orange"></a-cylinder>
+
+        <!-- Detalhes do muro -->
+        <a-box position="-.92 2.65 -2.70"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
+        <a-box position="-.72 2.65 -2.70"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
+        <a-box position="-.52 2.65 -2.70"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
+        <a-box position="-.32 2.65 -2.70"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
+        <a-box position="-.12 2.65 -2.70"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
+        <a-box position=".05 2.65 -2.70"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
+        <a-box position=".25 2.65 -2.70"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
+        <a-box position=".45 2.65 -2.70"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
+        <a-box position=".69 2.65 -2.70"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
+        <a-box position=".92 2.65 -2.70"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
+
+        <!-- Muro -->
+        <a-box src="#textura-muro_pilares" position="0 1.8 -2.9" width="2" depth="0.5" height="1.6" color="goldenrod"></a-box>
+        
+        <!-- Janelas -->
+        <a-box position=".4 2 -2.64" color="white" depth=".001" width=".45" height=".45"></a-box>
+        <a-box position="-.4 2 -2.64" color="white" depth=".001" width=".45" height=".45"></a-box>
+
+        <a-entity line="start: .4 2.22 -2.63; end: .4 1.77 -2.63; color: gray;"></a-entity>
+        <a-entity line="start: .171 2 -2.63; end: .62 2 -2.63; color: gray;"></a-entity>
+
+        <!-- Entrada -->
+        <a-circle position="0 1 -2.64" color="black" radius="-0.5"></a-circle>
+        
+        <!-- Céu -->
+        <a-sky color="skyblue"></a-sky>
+    </a-scene>
+</body>
+</html>
