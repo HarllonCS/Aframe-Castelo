@@ -9,14 +9,14 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 </head>
 <body>
-    <a-assets>
-        <img src="./imgs/muro_pilares.jpg" id="textura-muro_pilares">
-        <img src="./imgs/telhado.jpg" id="textura-telhado">
-        <img src="./imgs/chao.jpg" id="textura-chao">
-        <img src="./imgs/entrada.jpg" id="textura-entrada">
-    </a-assets>
-
     <a-scene>
+        <a-assets>
+            <img src="./imgs/muro_pilares.jpg" id="textura-muro_pilares">
+            <img src="./imgs/telhado.jpg" id="textura-telhado">
+            <img src="./imgs/chao.jpg" id="textura-chao">
+            <img src="./imgs/entrada.jpg" id="textura-entrada">
+            <img src="./imgs/portal.jpg" id="textura-portal">
+        </a-assets>
         <!-- Chão -->
         <a-plane src="#textura-chao" position="0 1 -3" rotation="-90 0 0" color="gray" height="20" width="20"></a-plane>
         
@@ -71,7 +71,7 @@
         <a-box position="-.95 2.65 -3.1"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
         <a-box position="-.95 2.65 -2.9"  width=".1" height=".1" depth=".1" color="#b08c28"></a-box>
 
-        <!-- Muro -->
+        <!-- Castelo -->
         <a-box src="#textura-muro_pilares" position="0 1.8 -3.7" width="2" depth="2.1" height="1.6" color="goldenrod"></a-box>
         
         <!-- Janelas -->
@@ -87,6 +87,10 @@
 
         <!-- Entrada -->
         <a-plane src="#textura-entrada" position="0 1.34 -2.64" color="tomato" height=".68"></a-plane>
+
+        <!-- <a-link href="pag2.html" title="pagina 2" image="#textura-portal" position="3 2 -3" borderColor="#fc0303"></a-link> -->
+        
+        <a-entity position="3 2 -3" geometry="primitive: circle; radius: 1" material="shader: flat; color: #2e1566" href="pag2.html; text: oi"></a-entity>
         
         <!-- Céu -->
         <a-sky color="skyblue"></a-sky>
